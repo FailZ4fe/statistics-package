@@ -1,5 +1,5 @@
 {
-  "name": "@FailZ4fe/integration",
+  "name": "@FailZ4fe/statistics-package",
   "version": "1.0.0",
   "description": "Statistic functions and graph generation with Node.js",
   "main": "index.js",
