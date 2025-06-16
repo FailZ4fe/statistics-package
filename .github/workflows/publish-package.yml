@@ -1,0 +1,33 @@
+name: Publish packages in GitHub Packages
+on:
+  push:
+    branches:
+      - main:
+
+jobs:
+  publish-package:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v4
+
+      - name: Configure .npmrc
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.x'
+          registry-url: 'https://npm.pkg.github.com'
+          # User or organization owning the workflow
+          scope: '@FailZ4fe'
+
+      - name: Installing dependencies using package-lock.json releases
+        run: npm ci
+
+      - name: Publish packages in GitHub Packages
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN  }}
