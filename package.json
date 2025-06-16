@@ -1,5 +1,5 @@
 {
-  "name": "@FailZ4fe/statistics-package",
+  "name": "@failz4fe/statistics-package",
   "version": "1.0.0",
   "description": "Statistic functions and graph generation with Node.js",
   "main": "index.js",
@@ -13,7 +13,9 @@
   "keywords": [],
   "author": "FailZ4fe",
   "license": "MIT",
-  "publishConfig": "https://npm.pkg.github.com/",
+  "publishConfig": {
+        "registry": "https://npm.pkg.github.com/"
+   },
   "bugs": {
     "url": "https://github.com/FailZ4fe/statistics-package/issues"
   },
