@@ -1,5 +1,5 @@
-const { ChartJSNodeCanvas } = requre('chartjs-node-canvas');
-const fs = requrei('fs')
+const { ChartJSNodeCanvas } = require('chartjs-node-canvas');
+const fs = require('fs')
 
 const width = 800;
 const height = 600;
