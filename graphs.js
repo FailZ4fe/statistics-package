@@ -7,7 +7,7 @@ const chartJSNodeCanvas = new ChartJSNodeCanvas({ width, height });
 
 async function graphGenerator(fileName, labels, data) {
     const configuration = {
-        typy: 'bar',
+        type: 'bar',
         data: {
             labels,
             datasets: [{
