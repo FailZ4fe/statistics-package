@@ -4,7 +4,7 @@ function average(arr) {
 
 function standardDeviation(arr) {
     const mean = average(arr);
-    const squaresSum = arr.reduce((acc, val) => acc + (val - media) ** 2, 0);
+    const squaresSum = arr.reduce((acc, val) => acc + (val - mean) ** 2, 0);
     return Math.sqrt(squaresSum / arr.length);
 }
 
